@@ -34,5 +34,4 @@ int main( )
         cout<<arr1[i]<<" occurs "<<cnt<<" times"<<endl;
         }
     }
-
 }
