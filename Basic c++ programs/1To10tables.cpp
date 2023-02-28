@@ -12,14 +12,15 @@ public:
             for(j=1;j<=10;j++)
             {
                 sum=i*j;
-                if(sum>=10)
+                cout<<i*j<<"\t";
+              /*  if(sum>=10)
                 {
-                cout<<i*j<<"  ";
+                cout<<i*j<<"  ";  2 spaces
                 }
                 else
                 {
-                    cout<<i*j<<"   ";
-                }
+                    cout<<i*j<<"   "; 3 spaces
+                }*/
             }
             cout<<endl;
         }
