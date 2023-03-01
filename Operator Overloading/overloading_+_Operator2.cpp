@@ -1,25 +1,27 @@
 #include<iostream>
 using namespace std;
-class square
+class f_binary
 {
 private:
     int num;
 public:
-    input(int x)
+    input()
     {
-        num=x;
+        cout<<"Enter a number:";
+        cin>>num;
     }
-    operator *()
-    {
-        cout<<"Square of "<<num<<" is:"<<num*num;
-    }
+    friend operator +(f_binary &obj1,f_binary &obj2);
 };
+operator +(f_binary &obj1,f_binary &obj2)
+{
+    cout<<"Addition of  "<<obj1.num<<" and "<<obj2.num<<" is:"<<obj1.num+obj2.num;
+}
 int main()
 {
-    int z;
-    cout<<"Enter a number:";
-    cin>>z;
-    square obj;
-    obj.input(z);
-    * obj;
+    f_binary obj3,obj4;
+    obj3.input();
+    obj4.input();
+    operator +(obj3,obj4);
+
 }
+
