@@ -30,7 +30,14 @@ public:
                 }
             }
         }
+        if(cnt>0)
+        {
         cout<<"The number of pairs whose sum is "<<sum<<" are:"<<cnt;
+        }
+        else
+        {
+        cout<<"No pair with sum 0";
+        }
     }
 
 };
