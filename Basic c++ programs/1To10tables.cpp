@@ -12,6 +12,7 @@ public:
             for(j=1;j<=10;j++)
             {
                 sum=i*j;
+<<<<<<< HEAD
                  cout<<i*j<<"\t";
                /*if(sum>=10)
                 {
@@ -20,6 +21,16 @@ public:
                 else
                 {
                     cout<<i*j<<"   ";  3 spaces
+=======
+                cout<<i*j<<"\t";
+              /*  if(sum>=10)
+                {
+                cout<<i*j<<"  ";  2 spaces
+                }
+                else
+                {
+                    cout<<i*j<<"   "; 3 spaces
+>>>>>>> 8777326fa202e9979a163e5ce82ec1240e185117
                 }*/
             }
             cout<<endl;
