@@ -3,7 +3,7 @@ using namespace std;
 //Finding the largest number whose both +ve and -ve side is present in array
 int main()
 {
-    int arr[]={4,5,-3,3,-5,9,-7,8};
+    int arr[]={4,5,-3,3,-5,9,-7,8}; //Here 5 is the largest number with both +ve and -ve side
     int Asize=8;
     int i,j;
     for(i=0;i<Asize;i++)
