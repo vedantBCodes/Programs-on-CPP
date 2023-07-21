@@ -23,12 +23,15 @@ int main()
     {
         if(arr[i]>0)
         {
-        for(j=i+1;j<Asize;j++)
+        for(j=(Asize-1);j>0;j--)
         {
-            if((arr[i]*arr[i])==(arr[j]*arr[j]))
+            if(arr[j]<0)
             {
-                cout<<arr[i];
+                if((arr[i]*arr[i])==(arr[j]*arr[j]))
+              {
+                cout<<"The largest number with both +ve and -ve sides is:"<<arr[i];
                 x=false;
+              }
             }
         }
         }
