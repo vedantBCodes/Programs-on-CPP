@@ -27,7 +27,7 @@ int main()
     int arr[20],Asize;
     cout<<"Enter the size of array:";
     cin>>Asize;
-    cout<<"Enter "<<Asize<<" array elements containing negative elements:";
+    cout<<"Enter "<<Asize<<" array elements with duplicates elements:";
     for(int i=0;i<Asize ;i++)
     {
         cin>>arr[i];
