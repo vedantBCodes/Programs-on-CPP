@@ -43,7 +43,7 @@ int main()
         marutiKiranaStore.setItem();
     }
     marutiKiranaStore.displayItem();
-    // We are not calling this displayItem() function in for loop because we already put the for the in the function defination of this function
+    // We are not calling this displayItem() function in for loop because we already put the for loop in the function defination.
 
     return 0;
 }
