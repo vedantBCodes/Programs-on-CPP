@@ -2,7 +2,7 @@
 #include<string.h>
 using namespace std;
  
-void stringReverse(char str[])
+void stringCopy(char str[])
 {
     char copystr[40];
     int len=strlen(str);
@@ -18,6 +18,6 @@ int main()
     char str[40];
     cout<<"Enter a string:";
     cin.getline(str,40);
-    stringReverse(str);
+    stringCopy(str);
    return 0;
 }
