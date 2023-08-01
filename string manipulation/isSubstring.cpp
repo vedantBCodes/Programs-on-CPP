@@ -2,7 +2,7 @@
 #include<string.h>
 using namespace std;
 
-bool isSubstringPresent(char str[],char subStr[])
+bool isSubstring(char str[],char subStr[])
 {
     int len1=strlen(str);
     int len2=strlen(subStr);
@@ -46,7 +46,7 @@ int main()
     cin.getline(str,40);
     cout<<"Enter a substring you want to search:";
     cin.getline(subStr,20);
-    bool check=isSubstringPresent(str,subStr);
+    bool check=isSubstring(str,subStr);
     if(check==true)
     {
         cout<<subStr<<" is substring of "<<str;
