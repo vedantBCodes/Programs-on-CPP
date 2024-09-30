@@ -2,10 +2,12 @@
 using namespace std;
 
 //Calculating the size of array using sizeof operator  ---> v.v IMP
+              //This approach is for For statically allocated arrays only .
+              //For dynamically allocated array we have to manually track the size of array
 
 int main() 
 {
-    int arr1[]={1,2,3,4,5};
+    int arr1[]={1,2,3,4,5};   //statically allocated array
     int intSize=sizeof(arr1)/sizeof(int);
     cout<<"Size of given integer array :"<<intSize<<endl;
     
