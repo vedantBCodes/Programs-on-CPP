@@ -14,10 +14,7 @@ void maxSubArrays(vector <int>vect1)
            {
                sum = sum + vect1[k];
            }
-           if(sum>total)
-           {
-               total=sum;
-           }
+           total = max(sum,total);
        }
    }
    cout<<"The maximum sum of a subarray is :"<<total;
