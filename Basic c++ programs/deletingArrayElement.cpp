@@ -18,19 +18,19 @@ int main()
 void deletionOfArrayElement(int arr[20],int Asize,int num)
 {
     int i;
-    int posOfNumber;
+    bool check = false;
     for(i=0;i<Asize;i++)
     {
-        if(arr[i]==num)
-        {
-            posOfNumber=i;
-        }
+      if(arr[i]==num)
+      {
+          check=true;
+          Asize --;
+      }
+      if(check == true)
+      {
+          arr[i] = arr[i+1] ;
+      }
     }
-    for(i=posOfNumber;i<Asize;i++)
-    {
-        arr[i]=arr[i+1];
-    }
-    Asize=Asize-1;
     cout<<"Array element after deleting "<<num<<" :";
     for(i=0;i<Asize;i++)
     {
