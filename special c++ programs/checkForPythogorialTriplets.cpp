@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
  
-bool pythogorialTriplets(int num1,int num2,int num3)
+bool pythogorialTriplets1(int num1,int num2,int num3)  //wrost approach
 {
    int maxNum;
    int sum=0;
@@ -29,12 +29,24 @@ bool pythogorialTriplets(int num1,int num2,int num3)
 
 }
 
+int pythogorialTriplets2(int num1, int num2 , int num3)   //Best Approach
+{
+    int maxNum = num1>num2 ? (num1>num3?num1:num3):(num2>num3?num2:num3);
+    if (((num1 == maxNum ) && (maxNum * maxNum == num2 * num2 + num3 * num3)) ||
+       ((num2 == maxNum ) && (maxNum * maxNum == num1 * num1 + num3 * num3)) ||
+       ((num3 == maxNum ) && (maxNum * maxNum == num1 * num1 + num2 * num2)))
+    {
+        return true;
+    }
+    return false;
+}
+
 int main()
 {
     int a,b,c;
     cout<<"Enter any the numbers to check whether they are pythogorial triplets or not:";
     cin>>a>>b>>c;
-    bool check=pythogorialTriplets(a,b,c);
+    bool check=pythogorialTriplets2(a,b,c);
     if(check==true)
     {
        cout<<"Yes it is a pythogorian triplet";
