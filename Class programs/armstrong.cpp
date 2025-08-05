@@ -1,34 +1,37 @@
 #include<iostream>
 using namespace std;
-class facto
-{
+
+class Armstrong {
 private:
-    int a,b,c,num,i;
+    int num;
+
 public:
-    input()
-    {
-        cout<<"Enter a number:";
-        cin>>num;
+    void input() {
+        cout << "Enter a number: ";
+        cin >> num;
     }
-    process()
-    {
-        a=0;
-        b=1;
-        cout<<"The fibbonaccy series:";
-        cout<<b<<" ";
-       for(i=1;i<num;i++)
-       {
-           c=a+b;
-           cout<<c<<" ";
-           a=b;
-           b=c;
-       }
+
+    void process() {
+        int sum = 0;
+        int temp = num;
+
+        while (temp > 0) {
+            int digit = temp % 10;
+            sum += digit * digit * digit;
+            temp /= 10;
+        }
+
+        if (sum == num) {
+            cout << num << " is an Armstrong number.";
+        } else {
+            cout << num << " is not an Armstrong number.";
+        }
     }
 };
-int main()
-{
-    facto obj;
+
+int main() {
+    Armstrong obj;
     obj.input();
     obj.process();
+    return 0;
 }
-
