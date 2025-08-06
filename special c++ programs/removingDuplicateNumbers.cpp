@@ -22,6 +22,31 @@ void  removeDuplicates(int arr[ ],int Asize)
         cout<<arr[i]<<" ";
     }
 }
+void removeDuplicates2(int arr[], int Asize) {
+    int arr2[Asize];
+    int cnt = 0;
+    bool check;
+
+    for(int i = 0; i < Asize; i++) {
+        check = false;
+        for(int j = 0; j < cnt; j++) {  // corrected: j < cnt
+            if(arr[i] == arr2[j]) {
+                check = true;
+                break; // optimization: break when duplicate is found
+            }
+        }
+        if(!check) {
+            arr2[cnt] = arr[i];
+            cnt++;
+        }
+    }
+
+    // Output the result
+    for(int i = 0; i < cnt; i++) {
+        cout << arr2[i] << " ";
+    }
+}
+
 int main()
 {
     int arr[20],Asize;
@@ -32,6 +57,6 @@ int main()
     {
         cin>>arr[i];
     }
-    removeDuplicates(arr,Asize);
+    removeDuplicates2(arr,Asize);
 }
 
