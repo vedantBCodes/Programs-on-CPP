@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-void primeFactorization(int num)
+void primeFactorization(int num)  //Wrost approach
 {
     int arr[30],x,i=0,j,cnt;
     for(j=2;j<=num;j++)
@@ -42,10 +42,39 @@ void primeFactorization(int num)
          }
     }
 }
+bool isPrime(int num)
+{
+    if(num <= 1) return false;
+    for(int i = 2; i * i <= num; i++)
+    {
+        if(num % i == 0)
+            return false;
+    }
+    return true;
+}
+
+void primeFactorization2(int num)  //Best approach
+{
+    if(isPrime(num))
+    {
+        cout << "Since " << num << " is a prime number, it doesn't have any prime factors other than itself.\n";
+        return;
+    }
+
+    cout << "Prime factors: ";
+    for(int i = 2; i <= num; i++)
+    {
+        while(num % i == 0)
+        {
+            cout << i << " ";
+            num /= i;
+        }
+    }
+}
 int main()
 {
     int num;
     cout<<"Enter a number:";
     cin>>num;
-    primeFactorization(num);
+    primeFactorization2(num);
 }
