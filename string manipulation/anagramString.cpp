@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string.h>
+#include <algorithm>
 using namespace std;
 
-bool anagramString(char str1[], char str2[])
+bool anagramString1(char str1[], char str2[])
 {
     int len1 = strlen(str1);
     int len2 = strlen(str2);
@@ -34,6 +35,17 @@ bool anagramString(char str1[], char str2[])
     }
    
 }
+bool anagramString2(string str1, string str2)  //Best approach
+{
+    if (str1.length() != str2.length()) {
+        return false;
+    }
+
+    sort(str1.begin(), str1.end());
+    sort(str2.begin(), str2.end());
+
+    return str1 == str2;
+}
 
 int main()
 {
@@ -43,7 +55,7 @@ int main()
     char str2[40];
     cout << "Enter another string:";
     cin.getline(str2, 40);
-    if(anagramString(str1, str2)==true)
+    if(anagramString1(str1, str2)==true)
     {
         cout<<"Strings are anagram";
     }
