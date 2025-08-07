@@ -4,17 +4,15 @@ using namespace std;
 
 bool checkPallindrome(char str[])
 {
-    bool check=true;
-    int size=strlen(str);
-   for(int i=0;i<size;i++)
+   int size=strlen(str);
+   for(int i=0;i<size/2;i++)
     {
         if(str[i]!=str[size-1-i])
         {
-            check=false;
-            return check; 
+            return false; 
         }
     }
-    return check;
+    return true;
 }
 
 int main()
