@@ -25,6 +25,19 @@ char* removeDuplicates(char str[])
     }
     return str;
 }
+string removeDuplicates(string str)   //better approach using string
+{
+   string newStr="";
+   int len=str.size();
+   for(int i=0;i<len;i++)
+   {
+       if(newStr.find(str[i])==string::npos)
+       {
+           newStr.push_back(str[i]);
+       }
+   }
+   return newStr;
+}
 int main()
 {
     char str[]="mahananda";
