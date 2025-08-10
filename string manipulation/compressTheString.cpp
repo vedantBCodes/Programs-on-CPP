@@ -59,6 +59,28 @@ void compressTheString(char str[])
     cout << "String after compressing : " << str2;
 }
 
+string compressString(string str)   //Best Approach
+{
+    string str2="";
+    int len=str.size();
+    for(int i=0;i<len;i++)
+    {
+        char ch = str[i];
+        int cnt=1;
+        while(i+1<len && str[i+1]==ch)
+        {
+            i++;
+            cnt++;
+        }
+        str2+=ch;
+        if(cnt>1)
+        {
+            str2+=to_string(cnt);
+        }
+    }
+    return str2;
+}
+
 int main()
 {
     char str[60] = "aaabbccdsa";
