@@ -50,9 +50,13 @@ bool isSubstring2(string str, string subStr) //Better approach
                 return true;
             }
         } else {
-            matchIndex = 0;
-            j--; // recheck current char as possible start
-        }
+              if (matchIndex > 0) 
+              {
+                 matchIndex = 0;
+                 j--; // only backtrack if we were in a partial match
+              }
+       }
+
     }
     return false;
 }
