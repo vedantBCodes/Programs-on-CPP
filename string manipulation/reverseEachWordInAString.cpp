@@ -39,6 +39,29 @@ void reversingAllWords(char str[])
     cout<<"There is a single word in a string";
    }
 }
+void reversingAllWords2(string str)  //better approach
+{
+    int len = str.size();
+    int start = 0, end = 0;
+
+    for(int i = 0; i <= len; i++)
+    {
+        if(i == len || str[i] == ' ')
+        {
+            end = i;
+            // Reverse the word from start to end-1
+            for(int j = start; j < start + (end - start) / 2; j++)
+            {
+                char temp = str[j];
+                str[j] = str[end - 1 - (j - start)];
+                str[end - 1 - (j - start)] = temp;
+            }
+            start = i + 1;
+        }
+    }
+    cout << "Entered string after reversing all the words: " << str << endl;
+}
+
 int main()
 {
     char str[40];
