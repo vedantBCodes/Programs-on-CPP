@@ -37,6 +37,29 @@ bool isSubstring(char str[],char subStr[])
          return false;
      }
 }
+bool isSubstring2(string str, string subStr) //Better approach
+{
+    int len1 = str.size();
+    int len2 = subStr.size();
+    int matchIndex = 0;
+
+    for (int j = 0; j < len1; j++) {
+        if (subStr[matchIndex] == str[j]) {
+            matchIndex++;
+            if (matchIndex == len2) {
+                return true;
+            }
+        } else {
+              if (matchIndex > 0) 
+              {
+                 matchIndex = 0;
+                 j--; // only backtrack if we were in a partial match
+              }
+       }
+
+    }
+    return false;
+}
 
 int main()
 {
