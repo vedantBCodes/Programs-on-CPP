@@ -10,15 +10,12 @@ int main()
     {
       cin>>arr[i];
     }
-    for(i=0;i<5;i++)
+    for(i=0;i<num;i++)
     {
-        for(j=i+1;j<5;j++)
+        if(arr[i]>arr[i+1])
         {
-            if(arr[i]>arr[j])
-            {
-                cout<<"Entered array is not sorted";
-                exit(0);
-            }
+            cout<<"Entered array is not sorted";
+            exit(0);
         }
     }
     cout<<"Entered array is sorted";
