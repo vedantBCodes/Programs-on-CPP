@@ -51,6 +51,40 @@ void function3(int arr[] , int size)
     cout<<"Maximum element  :"<<max<<endl;
 }
 
+void function4(int arr[], int size)
+{
+    if (size < 2) {
+        cout << "Not enough elements to find second min and max." << endl;
+        return;
+    }
+
+    int min = INT_MAX, max = INT_MIN;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] < min)
+            min = arr[i];
+        if (arr[i] > max)
+            max = arr[i];
+    }
+
+    int SecondMin = INT_MAX, SecondMax = INT_MIN;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] < SecondMin && arr[i] > min)
+            SecondMin = arr[i];
+        if (arr[i] > SecondMax && arr[i] < max)
+            SecondMax = arr[i];
+    }
+
+    if (SecondMin == INT_MAX)
+        cout << "No second minimum element found." << endl;
+    else
+        cout << "Second Minimum element: " << SecondMin << endl;
+
+    if (SecondMax == INT_MIN)
+        cout << "No second maximum element found." << endl;
+    else
+        cout << "Second Maximum element: " << SecondMax << endl;
+}
+
 void function5(int arr[] , int size)
 {
     cout<<"Even numbers  :";
@@ -77,5 +111,5 @@ int main()
     int arr[]={1,2,3,4,5};
     int size=sizeof(arr)/sizeof(arr[0]);
 
-    function5(arr,size);
+    function4(arr,size);
 }
