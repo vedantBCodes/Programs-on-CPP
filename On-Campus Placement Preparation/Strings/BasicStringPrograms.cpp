@@ -78,7 +78,7 @@ void function5(string str)
     for(int i=0;i<str.length();i++)
     {
         char ch=str[i];
-        if((ch >= 97) && (ch <= 122))
+        if((ch >= 97) && (ch <= 12))
         {
             ch=ch-32;
             str[i]=ch;
